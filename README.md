@@ -4,9 +4,7 @@ A gulp build system for js, css and copying/deleting of assets.
 
 `npm install @immutabl3/front-end-build`
 
-# Usage
-
-`gulpfile.js`
+# gulpfile.js
 
 - use `watch` anywhere in the gulp task name for development and livereload
 - use the `--production` flag or set `NODE_ENV=production` to generate a production build
