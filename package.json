@@ -1,6 +1,6 @@
 {
   "name": "@immutabl3/front-end-build",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "front-end build",
   "main": "index.js",
   "scripts": {
