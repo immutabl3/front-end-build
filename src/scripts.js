@@ -12,7 +12,7 @@ const log = require('./utils/log');
 const {
 	watch,
 	production
-} = require('./env');
+} = require('./utils/env');
 
 module.exports = function styles(opts) {
 	return function styles() {
@@ -32,7 +32,13 @@ module.exports = function styles(opts) {
 			debug: !production,
 		})
 		.transform(babelify)
-		.transform(envify(Object.assign({}, env, process.env)));
+		.transform(
+			envify(
+				Object.assign({
+					NODE_ENV: production ? 'production' : 'development'
+				}, process.env, env)
+			)
+		);
 
 		if (production) {
 			stream = stream.plugin(unpathify);

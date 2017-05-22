@@ -8,6 +8,10 @@ A gulp build system for js, css and copying/deleting of assets.
 
 `gulpfile.js`
 
+- use `watch` anywhere in the gulp task name for development and livereload
+- use the `--production` flag or set `NODE_ENV=production` to generate a production build
+- use the `--silent` flag to disable error beeps
+
 ```js
 const gulp = require('gulp');
 const {

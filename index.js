@@ -1,7 +1,7 @@
-const del = require('./del');
-const copy = require('./copy');
-const scripts = require('./scripts');
-const styles = require('./styles');
+const del = require('./src/del');
+const copy = require('./src/copy');
+const scripts = require('./src/scripts');
+const styles = require('./src/styles');
 
 module.exports = {
 	del,
