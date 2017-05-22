@@ -1,0 +1,48 @@
+{
+  "name": "@immutabl3/front-end-build",
+  "version": "0.0.1",
+  "description": "front-end build",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "engines": {
+    "node": "7.2.0",
+    "npm": "3.10.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immutabl3/front-end-build.git"
+  },
+  "author": "Joseph Clay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/immutabl3/front-end-build/issues"
+  },
+  "homepage": "https://github.com/immutabl3/front-end-build#readme",
+  "dependencies": {
+    "autoprefixer": "^7.1.1",
+    "babelify": "^7.3.0",
+    "bluebird": "^3.5.0",
+    "browserify": "^14.3.0",
+    "bundle-collapser": "^1.2.1",
+    "css-mqpacker": "^6.0.0",
+    "del": "^2.2.2",
+    "envify": "^4.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-env": "^0.4.0",
+    "gulp-if": "^2.0.2",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "postcss-scope-selector": "^0.1.0",
+    "through2": "^2.0.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0",
+    "yargs": "^8.0.1"
+  }
+}
