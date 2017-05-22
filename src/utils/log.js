@@ -1,6 +1,6 @@
 const through = require('through2');
 const gulpUtil = require('gulp-util');
-const { silent } = require('../env');
+const { silent } = require('./env');
 
 const log = function(message) {
 	return through.obj(function(file, enc, callback) {
