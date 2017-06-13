@@ -9,6 +9,7 @@ const minify = require('gulp-cssnano');
 const gulpif = require('gulp-if');
 const log = require('./utils/log');
 const rename = require('./utils/rename');
+const sassInlineImage = require('./utils/sassInlineImage');
 const {
 	watch,
 	production
@@ -29,7 +30,11 @@ module.exports = function scripts(opts) {
 			return gulp.src(source)
 				.on('error', log.err(log.red('err: styles')))
 				.pipe(gulpif(!production, sourcemaps.init()))
-				.pipe(sass().on('error', sass.logError))
+				.pipe(
+					sass({
+						functions: sassInlineImage
+					}).on('error', sass.logError)
+				)
 				.pipe(postcss([
 					autoprefixer({ browsers }),
 					mqpacker({ sort: true }),
