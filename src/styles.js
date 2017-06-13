@@ -32,7 +32,7 @@ module.exports = function scripts(opts) {
 				.pipe(gulpif(!production, sourcemaps.init()))
 				.pipe(
 					sass({
-						functions: sassInlineImage
+						functions: sassInlineImage()
 					}).on('error', sass.logError)
 				)
 				.pipe(postcss([
