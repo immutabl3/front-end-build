@@ -36,6 +36,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "node-sass": "^4.5.3",
     "postcss-scope-selector": "^0.1.0",
     "through2": "^2.0.3",
     "vinyl-buffer": "^1.0.0",
