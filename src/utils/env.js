@@ -7,6 +7,8 @@ const {
 
 const isProduction = production || process.env.NODE_ENV === 'production';
 
+if (isProduction) process.env.NODE_ENV = 'production';
+
 module.exports = {
 	watch,
 	silent,
