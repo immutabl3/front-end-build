@@ -23,8 +23,15 @@ module.exports = function scripts(opts) {
 			file,
 			dest,
 			browsers = ['last 2 version'],
-			selectorScope = ['.no-touchevents', ':hover']
+			selectorScope = ['.no-touchevents', ':hover'],
+			postcssConfig = ['autoprefixer', 'mqpacker', 'scopeSelector']
 		} = opts;
+
+		const postcssFns = {
+			autoprefixer: autoprefixer({ browsers }),
+			mqpacker: mqpacker({ sort: true }),
+			scopeSelector: scopeSelector(...selectorScope)
+		};
 
 		const build = function() {
 			return gulp.src(source)
@@ -35,11 +42,9 @@ module.exports = function scripts(opts) {
 						functions: sassInlineImage()
 					}).on('error', sass.logError)
 				)
-				.pipe(postcss([
-					autoprefixer({ browsers }),
-					mqpacker({ sort: true }),
-					scopeSelector(...selectorScope)
-				]))
+				.pipe(postcss(
+					postcssConfig.map(key => postcssFns[key])
+				))
 				.pipe(gulpif(!production, sourcemaps.write(map)))
 				.pipe(gulpif(production, minify()))
 				.pipe(rename(file))
